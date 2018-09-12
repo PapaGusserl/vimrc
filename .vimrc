@@ -59,6 +59,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='hybrid'
 let g:hybrid_custom_term_colors = 1
 let g:hybrid_reduced_contrast = 1 
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
 " TabsNerdTree
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 " TAGBAR
@@ -67,6 +69,11 @@ let g:tagbar_type_elixir = { 'ctagstype' : 'elixir', 'kinds' : [ 'f:functions', 
 let tlist_elixir_settings = 'Elixir;f:functions;functions:functions;c:callbacks;d:delegates;e:exceptions;i:implementations;a:macros;o:operators;m:modules;p:protocols;r:records;t:tests'
 " highlight search
 set hlsearch
+map <Leader>h <plug>nohl<CR>
 " ignorecase
 set ignorecase
-"Quotes
+" Устанавливаем русскую раскладку как командную
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0
+highlight lCursor guifg=NONE guibg=Cyan
